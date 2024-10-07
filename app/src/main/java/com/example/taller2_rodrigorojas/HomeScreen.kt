@@ -5,6 +5,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -30,7 +31,8 @@ fun HomeScreen(navController: NavController) {
 
         Button(
             onClick = { navController.navigate("main_activity_screen") },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Green)
         ) {
             Text(text = "Ir a la Actividad Principal")
         }
@@ -39,7 +41,8 @@ fun HomeScreen(navController: NavController) {
 
         Button(
             onClick = { navController.navigate("settings_screen") },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Green)
         ) {
             Text(text = "Ir a la Pantalla de Configuración")
         }

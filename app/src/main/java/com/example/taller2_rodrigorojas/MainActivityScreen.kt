@@ -5,6 +5,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -33,7 +34,8 @@ fun MainActivityScreen(navController: NavController) {
 
         Button(
             onClick = { savedName = name },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Green)
         ) {
             Text(text = "Guardar Nombre")
         }
@@ -51,7 +53,8 @@ fun MainActivityScreen(navController: NavController) {
                     isLoading = false
                 }
             },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Green)
         ) {
             Text(text = "Iniciar Tarea en Segundo Plano")
         }
